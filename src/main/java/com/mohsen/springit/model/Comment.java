@@ -1,7 +1,6 @@
 package com.mohsen.springit.model;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +9,9 @@ import javax.persistence.ManyToOne;
 import java.util.Objects;
 
 @Entity
-@Data
+@RequiredArgsConstructor
+@Getter @Setter
+@ToString
 @NoArgsConstructor
 public class Comment extends Auditable {
 
@@ -21,5 +22,6 @@ public class Comment extends Auditable {
 
     // link
     @ManyToOne
+    @NonNull
     private Link link;
 }
