@@ -9,6 +9,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.List;
+
 @SpringBootApplication
 public class SpringitApplication {
 
@@ -28,6 +30,13 @@ public class SpringitApplication {
             link.addComment(comment);
 
             System.out.println("We just insert link and comment");
+            System.out.println("==========================================================");
+
+            Link firstLink = linkRepository.findByTitle("Getting Started with Spring Boot 2");
+            System.out.println(firstLink.getTitle());
+
+            List<Link> foundLink = linkRepository.findAllByTitleLikeOOrderByCreationDate("Spring Boot 2");
+            System.out.println(foundLink.size());
         };
     }
 }
