@@ -1,4 +1,4 @@
-# springit
+# Springit
 
 ---
 
@@ -9,4 +9,5 @@ learn spring boot via project, create a reddit clone
 
 ## Refrences
 
-- base on video totorial of Dan vega
+- [Getting Started with Spring Boot 2](https://www.udemy.com/course/spring-boot-2/) by [Dan Vega](https://www.danvega.dev/)
+- [course doc](https://www.danvega.dev/docs/spring-boot-2-docs/)
